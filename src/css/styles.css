@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 1.4rem;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+main {
+  height: 100vh;
+  width: 75%;
+}
+
+.sidemenu {
+  background-color: #e0e0e0;
+  width: 25%;
+  height: 100vh;
+  padding: 2rem;
+  z-index: 9999;
+  border-left: 1px solid rgb(200, 200, 200);
+  box-shadow: -0.5em 0 0.5em rgba(127, 127, 127, 0.2);
+}
+
+.sidemenu__title__container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.sidemenu__title {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.sidemenu__title__text {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}

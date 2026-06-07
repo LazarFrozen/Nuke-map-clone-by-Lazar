@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>NukeMap clone by Lazar Popovic</title>
     <link rel="stylesheet" href="src/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="src/js/script.js" defer></script>
   </head>
   <body>
-    Test
+    <div class="container">
+      <main>
+        <div id="map"></div>
+      </main>
+      <aside class="sidemenu">
+        <div class="sidemenu__title__container">
+          <h1 class="sidemenu__title">NukeMap</h1>
+          <p class="sidemenu__title__text">clone by Lazar Popovic</p>
+        </div>
+        <hr />
+      </aside>
+    </div>
   </body>
 </html>
