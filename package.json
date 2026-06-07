@@ -1,0 +1,16 @@
+{
+  "name": "nuke-map",
+  "version": "1.0.0",
+  "description": "Nuke map clone project",
+  "license": "ISC",
+  "author": "Lazar Popovic",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "leaflet": "^1.9.4",
+    "parcel": "^2.16.4"
+  }
+}
