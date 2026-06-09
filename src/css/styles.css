@@ -104,3 +104,27 @@ option:disabled {
   height: 3.2rem;
   font-size: 1.6rem;
 }
+
+.burst__container {
+  display: flex;
+  align-items: center;
+}
+
+.radio__container {
+  display: flex;
+  align-items: center;
+  margin-left: 1.2rem;
+}
+
+.burst__radio {
+  margin-right: 0.6rem;
+}
+
+.radio__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.radio__wrap:first-child {
+  margin-right: 1.2rem;
+}
