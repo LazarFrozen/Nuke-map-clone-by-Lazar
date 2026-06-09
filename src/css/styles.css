@@ -128,3 +128,43 @@ option:disabled {
 .radio__wrap:first-child {
   margin-right: 1.2rem;
 }
+
+.action__layout {
+  margin-bottom: 1.2rem;
+}
+
+.main__button {
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    #ffabab 0%,
+    #da431d 50%,
+    #bd3737 100%,
+    #020024 100%
+  );
+  width: 12.8rem;
+  height: 4.8rem;
+  font-size: 2rem;
+}
+
+.buttons__layout {
+  display: flex;
+  margin-bottom: 0.6rem;
+}
+
+.additional__buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.2rem;
+  justify-content: space-between;
+}
+
+.secondary__button {
+  cursor: pointer;
+  width: 12.8rem;
+  height: 2rem;
+}
+
+.note {
+  font-size: 1rem;
+}
