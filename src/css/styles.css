@@ -168,3 +168,27 @@ option:disabled {
 .note {
   font-size: 1rem;
 }
+
+.leaflet-control-layers-base {
+  font-size: 1.6rem;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.leaflet-control-scalefactor {
+  padding: 10rem;
+}
+
+.leaflet-control-scale-line {
+  width: 10rem !important;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.leaflet-control-geocoder-form input {
+  font-size: 1.6rem;
+}
+
+.leaflet-container {
+  font-size: 1.6rem;
+}
