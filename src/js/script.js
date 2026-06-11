@@ -2,8 +2,10 @@ import L from "leaflet";
 import "leaflet-control-geocoder";
 import "leaflet-control-geocoder/src/style.css";
 import nukeIcon from "url:/img/nuke-marker.png";
+import "./locationPreset.js";
+import "./warheadPreset.js";
 
-const map = L.map("map").setView([44.787197, 20.457273], 13);
+export let map = L.map("map").setView([44.787197, 20.457273], 13);
 
 // Displaying marker
 const iconOptions = {
@@ -19,7 +21,7 @@ const markerOptions = {
   draggable: true,
 };
 
-let marker = L.marker([44.787197, 20.457273], markerOptions).addTo(map);
+export let marker = L.marker([44.787197, 20.457273], markerOptions).addTo(map);
 
 const defaultMap = L.tileLayer(
   "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
