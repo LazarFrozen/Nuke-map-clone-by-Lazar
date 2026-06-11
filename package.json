@@ -12,5 +12,8 @@
   "devDependencies": {
     "leaflet": "^1.9.4",
     "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "leaflet-control-geocoder": "^3.3.1"
   }
 }
