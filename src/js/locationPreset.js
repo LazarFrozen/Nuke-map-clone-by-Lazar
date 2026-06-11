@@ -16,5 +16,3 @@ function selectLocationPreset() {
 }
 
 selectLocationPreset();
-
-export default locationsData;
