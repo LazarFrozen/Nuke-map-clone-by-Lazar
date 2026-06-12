@@ -4,6 +4,7 @@ import "leaflet-control-geocoder/src/style.css";
 import nukeIcon from "url:/img/nuke-marker.png";
 import "./locationPreset.js";
 import "./warheadPreset.js";
+import "./detonateButton.js";
 
 export let map = L.map("map").setView([44.787197, 20.457273], 13);
 
