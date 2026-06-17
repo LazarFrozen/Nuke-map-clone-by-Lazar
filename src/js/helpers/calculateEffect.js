@@ -11,7 +11,7 @@ export const calculateEffect = ({ kilotons, formula, inputUnit = "km" }) => {
     radius: radiusM <= 1000 ? radiusM.toFixed(2) : radiusKm.toFixed(2),
     unit: radiusM <= 1000 ? "m" : "km",
     area: area.toFixed(2),
-    areaUnit: radiusM <= 50 ? "m^2" : "km^2",
+    areaUnit: radiusM <= 50 ? "m^2" : "km²",
   };
 };
 

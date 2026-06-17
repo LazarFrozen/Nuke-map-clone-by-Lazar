@@ -1,20 +1,7 @@
-import { kilotonsInput } from "../detonateButton";
+import { effectBlock } from "../helpers/effectBlock";
+import { displayEffects } from "../helpers/effectBlock";
 
-const displayEffects = document.querySelector(".effects__container");
-
-function effectBlock({ icon, title, body }) {
-  return `<div class="card__effect">
-    <div class="card__title">
-      <div class="blast__icon ${icon}"></div>
-      <div class="effect__title">${title}</div>
-    </div>
-    <div class="effect__text">
-      ${body}
-    </div>
-</div>`;
-}
-
-export function surfaceView(surface) {
+export function surfaceView(surface, kilotons) {
   const effects = [
     effectBlock({
       icon: "blast__icon--fireball",
@@ -48,7 +35,7 @@ export function surfaceView(surface) {
     }),
   ];
 
-  const titleDisplay = `<div class="effect__distance">Effect distances for a ${kilotonsInput.value} kilotons surface burst:<div>`;
+  const titleDisplay = `<div class="effect__distance">Effect distances for a ${kilotons} kilotons surface burst:</div>`;
 
   displayEffects.insertAdjacentHTML("afterbegin", effects.join(""));
   displayEffects.insertAdjacentHTML("afterbegin", titleDisplay);
