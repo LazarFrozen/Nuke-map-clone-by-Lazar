@@ -1,0 +1,42 @@
+import { effectBlock } from "../helpers/effectBlock";
+import { displayEffects } from "../helpers/effectBlock";
+
+export function surfaceView(surface, kilotons) {
+  const effects = [
+    effectBlock({
+      icon: "blast__icon--fireball",
+      title: `FireBall Radius: ${surface.fireball.radius} ${surface.fireball.unit} (${surface.fireball.area} ${surface.fireball.areaUnit})`,
+      body: `Maximum size of the nuclear fireball; relevance to damage on the ground depends on the height of detonation. If it touches the ground, the amount of radioactive fallout is significantly increased. Anything inside the fireball is effectively vaporized.`,
+    }),
+    effectBlock({
+      icon: "blast__icon--burn",
+      title: `Thermal radiation radius (3rd degree burns): ${surface.threeDegreeBurn.radius} ${surface.threeDegreeBurn.unit} (${surface.threeDegreeBurn.area} ${surface.threeDegreeBurn.areaUnit})`,
+      body: `Third degree burns extend throughout the layers of skin, and are often painless because they destroy the pain nerves. They can cause severe scarring or disablement, and can require amputation.`,
+    }),
+    effectBlock({
+      icon: "blast__icon--light",
+      title: `Light blast damage radius (1 psi): ${surface.lightBlast.radius} ${surface.lightBlast.unit} (${surface.lightBlast.area} ${surface.lightBlast.areaUnit})`,
+      body: `At around 1 psi overpressure, glass windows can be expected to break. This can cause many injuries in a surrounding population who comes to a window after seeing the flash of a nuclear explosion (which travels faster than the pressure wave). Often used as a benchmark for light damage in cities.`,
+    }),
+    effectBlock({
+      icon: "blast__icon--moderate",
+      title: `Moderate blast damage radius (5 psi): ${surface.moderateBlast.radius} ${surface.moderateBlast.unit} (${surface.moderateBlast.area} ${surface.moderateBlast.areaUnit})`,
+      body: `At 5 psi overpressure, most residential buildings collapse, injuries are universal, fatalities are widespread. The chances of a fire starting in commercial and residential damage are high, and buildings so damaged are at high risk of spreading fire. Often used as a benchmark for moderate damage in cities.`,
+    }),
+    effectBlock({
+      icon: "blast__icon--heavy",
+      title: `Heavy blast damage radius (20 psi): ${surface.heavyBlast.radius} ${surface.heavyBlast.unit} (${surface.heavyBlast.area} ${surface.heavyBlast.areaUnit})`,
+      body: `At 20 psi overpressure, heavily built concrete buildings are severely damaged or demolished; fatalities approach 100%. Often used as a benchmark for heavy damage in cities.`,
+    }),
+    effectBlock({
+      icon: "blast__icon--radiation",
+      title: `Radiation radius (500 rem): ${surface.radiation.radius} ${surface.radiation.unit} (${surface.radiation.area} ${surface.radiation.areaUnit})`,
+      body: `500 rem ionizing radiation dose; likely fatal, in about 1 month; 15% of survivors will eventually die of cancer as a result of exposure.`,
+    }),
+  ];
+
+  const titleDisplay = `<div class="effect__distance">Effect distances for a ${kilotons} kilotons surface burst:</div>`;
+
+  displayEffects.insertAdjacentHTML("afterbegin", effects.join(""));
+  displayEffects.insertAdjacentHTML("afterbegin", titleDisplay);
+}
