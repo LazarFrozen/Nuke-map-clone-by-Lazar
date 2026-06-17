@@ -1,5 +1,5 @@
 import { effectBlock } from "../helpers/effectBlock";
-import { displayEffects } from "../helpers/effectBlock";
+import { displayEffects } from "../detonateButton";
 
 export function airburstView(airburst, kilotons) {
   const effects = [
