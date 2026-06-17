@@ -2,23 +2,23 @@ import calculateEffect from "./helpers/calculateEffect.js";
 
 export const SURFACE_EFFECTS = {
   fireball: {
-    formula: (y) => Math.pow(y, 0.4) * 145 * 0.3048,
     inputUnit: "m",
+    formula: (y) => Math.pow(y, 0.4) * 145 * 0.3048,
   },
 
-  threeDB: {
+  threeDegreeBurn: {
     formula: (y) => Math.pow(y, 0.41) * 0.67,
   },
 
-  light: {
+  lightBlast: {
     formula: (y) => Math.pow(y, 0.33) * 1.42,
   },
 
-  medium: {
+  moderateBlast: {
     formula: (y) => Math.pow(y, 0.33) * 0.46,
   },
 
-  heavy: {
+  heavyBlast: {
     formula: (y) => Math.pow(y, 0.33) * 0.22,
   },
 

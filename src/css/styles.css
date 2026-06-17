@@ -38,6 +38,7 @@ main {
   z-index: 9999;
   border-left: 1px solid rgb(200, 200, 200);
   box-shadow: -0.5em 0 0.5em rgba(127, 127, 127, 0.2);
+  overflow-y: auto;
 }
 
 .title__container {
@@ -191,4 +192,66 @@ option:disabled {
 
 .leaflet-container {
   font-size: 1.6rem;
+}
+
+.effect__distance {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.effect__text {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.effect__title {
+  flex-direction: row;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.card__title {
+  align-items: center;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  display: flex;
+}
+
+.blast__icon {
+  flex: none;
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.blast__icon--fireball {
+  background-color: rgba(255, 165, 0, 0.3);
+  border: 1px solid #ffff00;
+}
+
+.blast__icon--burn {
+  background-color: rgba(255, 165, 0, 0.3);
+  border: 1px solid #ffa500;
+}
+
+.blast__icon--light {
+  background-color: rgba(128, 128, 128, 0.3);
+  border: 1px solid #808080;
+}
+
+.blast__icon--moderate {
+  background-color: rgba(17, 0, 255, 0.3);
+  border: 1px solid #4287f5;
+}
+
+.blast__icon--heavy {
+  background-color: rgba(223, 32, 32, 0.3);
+  border: 1px solid #df2020;
+}
+
+.blast__icon--radiation {
+  background-color: rgba(0, 255, 0, 0.3);
+  border: 1px solid #00ff00;
 }
