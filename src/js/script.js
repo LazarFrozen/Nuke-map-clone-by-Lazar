@@ -5,6 +5,7 @@ import nukeIcon from "url:/img/nuke-marker.png";
 import "./locationPreset.js";
 import "./warheadPreset.js";
 import "./detonateButton.js";
+import "./newDetonation.js";
 import "./clearAllEffects.js";
 
 export let map = L.map("map").setView([44.787197, 20.457273], 13);

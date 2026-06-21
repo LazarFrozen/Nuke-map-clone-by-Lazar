@@ -37,10 +37,10 @@ export function buildEffectCircles(effectData) {
   ];
 }
 
-export function displayCircles(map, center, circles) {
+export function displayCircles(map, center, circles, replaceExisting = true) {
   if (!circleLayerGroup) {
     circleLayerGroup = L.layerGroup().addTo(map);
-  } else {
+  } else if (replaceExisting) {
     circleLayerGroup.clearLayers();
   }
 
