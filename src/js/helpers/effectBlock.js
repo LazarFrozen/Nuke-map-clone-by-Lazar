@@ -1,5 +1,3 @@
-export const displayEffects = document.querySelector(".effects__container");
-
 export function effectBlock({ icon, title, body }) {
   return `<div class="card__effect">
     <div class="card__title">
