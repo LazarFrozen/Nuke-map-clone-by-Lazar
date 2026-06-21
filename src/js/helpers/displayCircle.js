@@ -53,3 +53,9 @@ export function displayCircles(map, center, circles) {
     }).addTo(circleLayerGroup);
   });
 }
+
+export function clearDisplayedCircles() {
+  if (circleLayerGroup) {
+    circleLayerGroup.clearLayers();
+  }
+}
