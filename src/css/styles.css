@@ -255,3 +255,10 @@ option:disabled {
   background-color: rgba(0, 255, 0, 0.3);
   border: 1px solid #00ff00;
 }
+
+.alert {
+  color: #df2020;
+  padding-top: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
