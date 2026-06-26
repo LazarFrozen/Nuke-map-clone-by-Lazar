@@ -10,6 +10,9 @@ import "./clearAllEffects.js";
 
 export let map = L.map("map").setView([44.787197, 20.457273], 13);
 
+const markerPane = map.createPane("marker-top-pane");
+markerPane.style.zIndex = 700;
+
 // Displaying marker
 const iconOptions = {
   iconUrl: nukeIcon,
@@ -22,6 +25,7 @@ const customIcon = L.icon(iconOptions);
 const markerOptions = {
   icon: customIcon,
   draggable: true,
+  pane: "marker-top-pane",
 };
 
 export let marker = L.marker([44.787197, 20.457273], markerOptions).addTo(map);
