@@ -199,6 +199,45 @@ option:disabled {
   font-weight: 700;
 }
 
+.card__effect {
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card__effect:hover,
+.card__effect.is-highlighted {
+  background-color: rgba(255, 246, 234, 0.95);
+  border-color: rgba(218, 67, 29, 0.35);
+  box-shadow: 0 0.8rem 1.6rem rgba(218, 67, 29, 0.12);
+  transform: translateY(-1px);
+}
+
+.effect-circle-outline.is-highlighted {
+  animation: effect-circle-stroke-pulse 1s ease-in-out infinite;
+}
+
+@keyframes effect-circle-stroke-pulse {
+  0% {
+    stroke: var(--effect-stroke);
+    stroke-width: 2;
+  }
+
+  50% {
+    stroke: #ffffff;
+    stroke-width: 5;
+  }
+
+  100% {
+    stroke: var(--effect-stroke);
+    stroke-width: 2;
+  }
+}
+
 .effect__text {
   font-size: 1.2rem;
   padding: 0.5rem 1rem 1rem 1rem;

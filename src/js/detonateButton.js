@@ -4,7 +4,11 @@ import { airburstView } from "./view/airburstView";
 import { surfaceView } from "./view/surfaceView";
 import { marker } from "./script";
 import { map } from "./script";
-import { buildEffectCircles, displayCircles } from "./helpers/displayCircle";
+import {
+  buildEffectCircles,
+  displayCircles,
+  syncEffectHoverInteractions,
+} from "./helpers/displayCircle";
 import { validateYieldInput } from "./helpers/validateYield";
 import { zoomToEffect } from "./helpers/zoomLevel";
 
@@ -29,6 +33,7 @@ function detonateButtonAction() {
       const airCalculations = calculateAllAirEffects(kilotonsInput.value);
       airburstView(airCalculations, kilotonsInput.value);
       displayCircles(map, center, buildEffectCircles(airCalculations), true);
+      syncEffectHoverInteractions();
       zoomToEffect(map, marker, kilotonsInput.value);
     }
     if (radioButtonSurface.checked) {
@@ -43,6 +48,7 @@ function detonateButtonAction() {
         buildEffectCircles(surfaceCalculations),
         true,
       );
+      syncEffectHoverInteractions();
       zoomToEffect(map, marker, kilotonsInput.value);
     }
   });

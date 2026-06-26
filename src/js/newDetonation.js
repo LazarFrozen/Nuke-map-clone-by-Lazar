@@ -4,7 +4,11 @@ import { airburstView } from "./view/airburstView";
 import { surfaceView } from "./view/surfaceView";
 import { marker, map } from "./script";
 import { displayEffects } from "./detonateButton";
-import { buildEffectCircles, displayCircles } from "./helpers/displayCircle";
+import {
+  buildEffectCircles,
+  displayCircles,
+  syncEffectHoverInteractions,
+} from "./helpers/displayCircle";
 import { validateYieldInput } from "./helpers/validateYield";
 import { zoomToEffect } from "./helpers/zoomLevel";
 import { alertBox } from "./detonateButton";
@@ -28,6 +32,7 @@ function newDetonationButtonAction() {
       const airCalculations = calculateAllAirEffects(kilotonsInput.value);
       airburstView(airCalculations, kilotonsInput.value);
       displayCircles(map, center, buildEffectCircles(airCalculations), false);
+      syncEffectHoverInteractions();
       zoomToEffect(map, marker, kilotonsInput.value);
     }
 
@@ -42,6 +47,7 @@ function newDetonationButtonAction() {
         buildEffectCircles(surfaceCalculations),
         false,
       );
+      syncEffectHoverInteractions();
       zoomToEffect(map, marker, kilotonsInput.value);
     }
   });
